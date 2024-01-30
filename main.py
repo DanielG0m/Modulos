@@ -24,3 +24,5 @@ import modulate.camper as camper
 # hola.append(f"Data {i}")
 
 # print(hola)
+
+camper.menu()

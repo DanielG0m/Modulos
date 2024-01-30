@@ -1,4 +1,5 @@
 import os
+from .Variables import save,getAll
 def create():
     os.system('cls')
     print("""
@@ -6,15 +7,16 @@ def create():
         #     Formulario del Camper     #
         #################################
           """)
-    camper={
+    save({
         "Nombre": input("Ingrese el nombre del camper: "),
         "Apellido": input("Ingrese el apellido del camper: "),
         "Edad": int(input("Ingrese la edad del camper: "))   
-    }
-    print(camper)
+    })
+    os.system('pause')
 
 def read():
-    print("Datos del camper ")
+    print(save)
+    os.system('cls')
 
 def update():
     print("Camper actualizado ")
