@@ -1,5 +1,6 @@
 import os
 from .Variables import save,getAll
+from tabulate import tabulate
 def create():
     os.system('cls')
     print("""
@@ -15,7 +16,12 @@ def create():
     os.system('pause')
 
 def read():
-    print(save)
+    print(f"""
+        #################################
+        #     Formulario del Camper     #
+        #################################
+        {tabulate(getAll())}
+        """)
     os.system('cls')
 
 def update():
