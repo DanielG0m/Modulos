@@ -16,10 +16,13 @@ def menu():
 #        Menu del camper        #
 #################################
           """)
-    print("1. Guardar\n2. Buscar\n3. Actualizar\n4. Eliminar")
+    menu= ["Guardar","Buscar","Actualizar","Eliminar"]
+    print(".".join([f"{i+1}. {val} " for i,val in enumerate(menu)]))
     while True:
         try:
             opc=int(input())
-            break
+            if opc<=len(menu) and opc>0:
+                print("x")
+                break
         except ValueError:
             print("Ingrese un dato valido")
